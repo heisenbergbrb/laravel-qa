@@ -3,9 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Question extends Model
 {
+    use Sluggable;
+    use SluggableScopeHelpers;
 
     protected $fillable = [
         'title',
